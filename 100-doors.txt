@@ -1,23 +1,23 @@
-function getFinalOpenedDoors(n_doors) {
+function getOpenedDoors(n_doors) {
   var doors = [];
-  doors.length = 100;
+  doors.length = n_doors;
   doors.fill(0);
   var open_doors = [];
-  for (let i=2; i<=100; i++) {
-    for (let j=i-1; j<=100; j+=i) {
+  for (let i=2; i<=n_doors; i++) {
+    for (let j=i-1; j<=n_doors; j+=i) {
       if (doors[j] == 1) {
         doors[j] = 0;
       } else {
         doors[j] = 1;
       }
-      }
-  }
+     }
+    }
   for (let i=0; i<100; i++) {
     if (doors[i] == 0) {
       open_doors.push(i+1);
     }
-  }
+   }
    return open_doors;
 }
 
-console.log(getFinalOpenedDoors())
+console.log(getOpenedDoors(100))
