@@ -1,1 +1,1 @@
-A compilation of the Rosetta Stone challenges I’ve completed in JavaScript for backup and reference. 
+A compilation of my solutions to Rosetta Code challenges for backup and reference. 
