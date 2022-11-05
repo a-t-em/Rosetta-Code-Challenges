@@ -6,20 +6,16 @@ function mode(arr) {
     if (val.includes(arr[i]) == false) {
       val.push(arr[i]);
       count.push(1);
-    } else{
+    } else {
       count[val.indexOf(arr[i])] += 1; 
     }
   }
   var max = Math.max(...count);
-  console.log(val);
-  console.log(max, count);
   for (let i=0; i<count.length; i++) {
     if (count[i] == max) {
       mode.push(val[i]);
-      console.log(i, mode)
     }
   }
-  console.log(mode);
   return mode;
 }
 
