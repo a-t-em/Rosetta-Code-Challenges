@@ -1,0 +1,12 @@
+function babbage(babbageNum, endDigits) {
+  var places = endDigits.toString().length;
+  for (let i=babbageNum-1; i>0; i--) {
+    console.log((i**(2)).toString().slice(-places), endDigits)
+    if ((i**(2)).toString().slice(-places) ==  endDigits.toString()) {
+      return i;
+    }
+  }
+  return babbageNum;
+}
+
+babbage(99736, 269696)
