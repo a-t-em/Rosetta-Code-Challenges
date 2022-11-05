@@ -1,0 +1,32 @@
+function pythagoreanMeans(arr) { 
+  var n = arr.length;
+  var sum = 0;
+  var product = 1;
+  var r_sum = 0;
+  var ans = '';
+  for (let i=0; i<n; i++) {
+    sum += arr[i];
+    product*= arr[i];
+    r_sum += 1/arr[i];
+  }
+  var A = sum/n;
+  var G = Math.pow(product, 1 / n);
+  var H = n/r_sum;
+
+  if (A >= G && G >= H) {
+    ans = 'yes';
+  } else {
+    ans = 'no';
+  }
+  
+  return {
+  values: {
+    Arithmetic: parseFloat(`${A}`),
+    Geometric: parseFloat(`${G}`),
+    Harmonic: parseFloat(`${H}`)
+    },
+  test: `is A >= G >= H ? ${ans}`
+  }
+}
+
+console.log(pythagoreanMeans([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
