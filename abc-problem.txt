@@ -1,0 +1,41 @@
+function canMakeWord(word) {
+  const blocks = [['B', 'O'],
+['X', 'K'],
+['D', 'Q'],
+['C', 'P'],
+['N', 'A'],
+['G', 'T'],
+['R', 'E'],
+['T', 'G'],
+['Q', 'D'],
+['F', 'S'],
+['J', 'W'],
+['H', 'U'],
+['V', 'I'],
+['A', 'N'],
+['O', 'B'],
+['E', 'R'],
+['F', 'S'],
+['L', 'Y'],
+['P', 'C'],
+['Z', 'M']];
+  word = word.toUpperCase();
+  for (let i=0; i<word.length; i++) {
+      var found = false; 
+      for (let k=0; k<blocks.length; k++) {
+        if (word[i] == blocks[k][0] || word[i] == blocks[k][1]) {
+          console.log(word[i], blocks[k], blocks[k][0]);
+          blocks.splice(k, 1);
+          found = true;
+          break;
+        } 
+      }
+      if (found == false) {
+        return false;
+      }
+    }
+  return true;
+  }
+
+
+canMakeWord('can')
