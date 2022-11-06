@@ -1,4 +1,4 @@
-/* Kudos to David K (https://math.stackexchange.com/users/139123/david-k), Finding the Center of a circle given two points and a radius (algebraically), URL (version: 2017-04-24): https://math.stackexchange.com/q/1781546 for easy equations to calculate the circles' coordinates*/
+/* Kudos to David K, Finding the Center of a circle given two points and a radius (algebraically), URL: https://math.stackexchange.com/q/1781546 for the equations calculating the circles' coordinates*/
 
 function getCircles(...args) {
   var x1 = args[0][0];
