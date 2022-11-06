@@ -9,11 +9,10 @@ function getCircles(...args) {
   var midx = (x1+x2)/2;
   var midy = (y1+y2)/2;
   var r = args[2];
-  if (d == 0) {
-    if (r == 0) {
+   if (r == 0) {
       return "Radius Zero";
-    }
-    return "Coincident point. Infinite solutions";
+  } else if (d == 0) {
+      return "Coincident point. Infinite solutions";
   } else if (d > r*2) {
       return "No intersection. Points further apart than circle diameter";
   } else if (d == r*2 ) {
