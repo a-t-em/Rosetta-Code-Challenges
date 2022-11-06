@@ -1,0 +1,33 @@
+function getCircles(...args) {
+  var x1 = args[0][0];
+  var y1 = args[0][1];
+  var x2 = args[1][0];
+  var y2 = args[1][1];
+  var d = Math.sqrt((x1-x2)**2 + (y1-y2)**2);
+  var midx = (x1+x2)/2;
+  var midy = (y1+y2)/2;
+  var r = args[2];
+  console.log(d, midx, midy);
+  if (d == 0) {
+    if (r == 0) {
+      return "Radius Zero";
+    }
+    return "Coincident point. Infinite solutions";
+  } else if (d > r*2) {
+      return "No intersection. Points further apart than circle diameter";
+  } else if (d == r*2 ) {
+      return [midx, midy];
+  } else {
+    var a = d/2;
+    var b = Math.sqrt(r**2 - a**2);
+    console.log(b)
+    var x3 = midx + b*(midy-y2)/a
+    var y3 = midy - b*(midx-x2)/a;
+    var x4 = midx - b*(midy-y2)/a;
+    var y4 = midy + b*(midx-x2)/a; 
+    return [[parseFloat(x3.toFixed(4)), parseFloat(y3.toFixed(4))], [parseFloat(x4.toFixed(4)), parseFloat(y4.toFixed(4))]]
+  }
+  return true;
+}
+
+console.log(getCircles([0.1234, 0.9876], [0.8765, 0.2345], 2.0))
