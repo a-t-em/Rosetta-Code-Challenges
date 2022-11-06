@@ -19,12 +19,11 @@ function getCircles(...args) {
   } else {
     var a = d/2;
     var b = Math.sqrt(r**2 - a**2);
-    console.log(b)
-    var x3 = midx + b*(midy-y2)/a
+    var x3 = midx + b*(midy-y2)/a;
     var y3 = midy - b*(midx-x2)/a;
     var x4 = midx - b*(midy-y2)/a;
     var y4 = midy + b*(midx-x2)/a; 
-    return [[parseFloat(x3.toFixed(4)), parseFloat(y3.toFixed(4))], [parseFloat(x4.toFixed(4)), parseFloat(y4.toFixed(4))]]
+    return [[parseFloat(x3.toFixed(4)), parseFloat(y3.toFixed(4))], [parseFloat(x4.toFixed(4)), parseFloat(y4.toFixed(4))]];
   }
 }
 
