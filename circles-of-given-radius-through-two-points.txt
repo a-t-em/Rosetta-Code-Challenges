@@ -7,7 +7,6 @@ function getCircles(...args) {
   var midx = (x1+x2)/2;
   var midy = (y1+y2)/2;
   var r = args[2];
-  console.log(d, midx, midy);
   if (d == 0) {
     if (r == 0) {
       return "Radius Zero";
@@ -27,7 +26,6 @@ function getCircles(...args) {
     var y4 = midy + b*(midx-x2)/a; 
     return [[parseFloat(x3.toFixed(4)), parseFloat(y3.toFixed(4))], [parseFloat(x4.toFixed(4)), parseFloat(y4.toFixed(4))]]
   }
-  return true;
 }
 
 console.log(getCircles([0.1234, 0.9876], [0.8765, 0.2345], 2.0))
